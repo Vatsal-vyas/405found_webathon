@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transliteration App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>TRANSLITERATION</h1>
+        <form class="pholder" method="POST" action="/">
+            
+            <select class="pholder" name="source_script">
+                <option value="ITRANS">English</option>
+                <option value="DEVANAGARI">Devanagari</option>
+                <option value="TAMIL">Tamil</option>
+            </select>
+            <textarea name="text" placeholder="Enter the text"></textarea>
+            <select class="pholder" name="target_script">
+                <option value="DEVANAGARI">Devanagari</option>
+                <option value="TAMIL">Tamil</option>
+                <option value="ITRANS">English</option>
+            </select>
+            <button type="submit">Transliterate</button>
+        </form>
+        {% if result %}
+        <div class="result">
+            <h2>Transliterated Text:</h2>
+            <p>{{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

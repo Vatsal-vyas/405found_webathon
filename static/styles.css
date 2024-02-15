@@ -1,0 +1,81 @@
+body {
+    font-family: garamond;
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pholder{
+    text-align: center;
+}
+.container {
+    max-width: 580px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #0f0b0bd1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+    position: relative; /* Add this to position the container */
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Add a semi-transparent white background */
+    border-radius: 10px;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+h1, h2 {
+    text-align: center;
+    font-family: monospace;
+    color: beige;
+}
+
+textarea, select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0202029d;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    color: beige;
+}
+
+.result h2 {
+    margin-bottom: 10px;
+}
+
+textarea {
+    position: relative;
+}
+
+textarea::placeholder {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    color: #ccc;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
